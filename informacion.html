@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laboratorio de ciberseguridad - Información</title>
+    <link rel="stylesheet" href="styles/informacion.css">
+    <script src="scripts/informacion.js"></script>
+  </head>
+  <body>
+    <h1>Laboratorio de ciberseguridad</h1>
+        <nav>
+            <ul>
+              <li><a href="informacion.html">Información</a></li>
+              <li><a href="dificultades.html">Dificultades del Escenario</a></li>
+              <li><a href="banderas.html">Banderas</a></li>
+              <li><a href="pistas.html">Pistas</a></li>
+              <li><a href="personalizado.html">Escenario Personalizado</a></li>
+            </ul>
+          </nav>
+    <h2>Información</h2>
+    <ul>
+      <li>El escenario simula una infraestructura de red corporativa, con varias redes privadas, servidores y equipos de usuario, que ofrecen diferentes servicios vulnerables, como servicio dns, wordpress, ftp, webs con bases de datos SQL, para realizar pruebas de pentesting.</li>
+      <li>El punto de partida del atacante será la red interna de pruebas, necesitará comprometer los servidores y equipos de usuario o clientes conectados a dicha red, para conseguir acceder al resto de redes de la infraestructura y capturar las banderas escondidas.</li>
+      <li>El escenario está diseñado para lograr un aislamiento entre las diferentes redes de la infraestructura, proporcionando al usuario la posibilidad de practicar las tácticas de pivotaje entre redes y movimientos laterales entre máquinas del entorno. La máquina atacante solo tiene visibilidad de la red privada de pruebas, para pivotar a la red de preproducción será necesario utilizar la máquina vm5 como esclavo y realizar los ataques a la red de preproducción desde dicha máquina, una vez que hayamos conseguido vulnerarla. Con la red de producción se da una situación similar, en este caso se utilizarán las máquinas vm5 y vm9 como máquinas esclavo para conseguir acceso a la red.</li> 
+      <li>El contexto que se da ha dado a este escenario reside en una máquina atacante vm1, que actúa como “insider” o amenaza interna, como podría ser un empleado deshonesto que quiere vulnerar la red corporativa y tomar el control de todas las redes y máquinas de la infraestructura.</li>
+      <li>El punto de partida y la entrada de la máquina virtual uno (atacante KaliLinux) al escenario está en: 192.168.56.48/29. Este rango de IPs se corresponde con el rango de la red privada de pruebas, la dificultad fácil del escenario.</li>
+    </ul>
+      <table>
+      <tr>
+        <th>Máquina virtual</th>
+        <th>Información</th>
+      </tr>
+      <tr>
+        <td>vm1</td>
+        <td>Máquina atacante, es un sistema Kali Linux que tiene conectividad con la red de pruebas (punto de acceso al escenario). Es un insider de la red corporativa</td>
+      </tr>
+      <tr>
+        <td>vm2</td>
+        <td>Servidor web de la red de pruebas, dispone de un servicio web que muestra una página web vulnerable, llamada DVWA, que nos permitirá realizar pruebas de hacking web.</td>
+      </tr>
+      <tr>
+        <td>vm3</td>
+        <td>Servidor web de la red de pruebas, dispone de un servicio web que muestra una página web vulnerable, llamada Juice Shop, que nos permitirá realizar pruebas de hacking web.</td>
+      </tr>
+      <tr>
+        <td>vm4</td>
+        <td>Máquina de usuario de la red de pruebas, presenta una vulnerabilidad en el servicio vsftpd 2.3.4</td>
+      </tr>
+      <tr>
+        <td>vm5</td>
+        <td>Máquina de usuario de la red de pruebas y de la red de preproducción. Esta máquina nos va a servir para pivotar entre dichas redes</td>
+      </tr>
+      <tr>
+        <td>vm6</td>
+        <td>Servidor FTP de la red de preproducción, se encarga de la transferencia de ficheros entre los usuarios del escenario.</td>
+      </tr>
+      <tr>
+        <td>vm7</td>
+        <td>Servidor Windows 2008 de la red de preproducción, presenta múltiples vulnerabilidades, entre ellas el exploit eternalblue.</td>
+      </tr>
+      <tr>
+        <td>vm8</td>
+        <td>Máquina de usuario de la red de preproducción, presenta una vulnerabilidad en el servicio unreal ircd.</td>
+      </tr>
+      <tr>
+        <td>vm9</td>
+        <td>Máquina de usuario de la red de preproducción y de la red de producción. Esta máquina nos va a servir para pivotar entre dichas redes.</td>
+      </tr>
+      <tr>
+        <td>vm10</td>
+        <td>Servidor dns de la red de producción, se encargará de transformar las IPs de las máquinas del escenario en nombres de dominio.</td>
+      </tr>
+    </table>
+  </body>
+</html>

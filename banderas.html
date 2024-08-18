@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratorio de ciberseguridad</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/banderas.css">
+        <script src="scripts/banderas.js"></script>
+    </head>
+    <body>
+        <h1>Laboratorio de ciberseguridad</h1>
+        <nav>
+            <ul>
+                <li><a href="informacion.html">Información</a></li>
+                <li><a href="dificultades.html">Dificultades del Escenario</a></li>
+                <li><a href="banderas.html">Banderas</a></li>
+                <li><a href="pistas.html">Pistas</a></li>
+                <li><a href="personalizado.html">Escenario Personalizado</a></li>
+            </ul>
+        </nav>
+        <div class="container mt-3">
+            <h2>Banderas</h2>
+            <p>El objetivo final de este escenario reside en conseguir tomar el control de todos los servidores, redes y dispositivos de la infraestructura, obteniendo permisos de usuario administrador y capturando todas las banderas ocultas.
+               En la siguiente imagen se puede apreciar la distribución de las banderas a lo largo del escenario. Existen varias banderas verdes, amarillas y una bandera roja, los colores de las banderas indican la dificultad que implica. En algunas banderas se tendrá que encontrar un fichero de texto oculto y en otras se deberá de superar un reto.
+            </p>
+            <ul>
+                <li><b>Bandera verde:</b> Bandera de dificultad fácil, todas las banderas verdes se encuentran escondidas en la red privada de pruebas 192.168.56.48/29. Existen cuatro banderas verdes escondidas en las máquinas virtuales vm2, vm3, vm4 y vm5.</li>
+                <li><b>Bandera amarilla:</b> Bandera de dificultad media, todas las banderas amarillas se encuentran escondidas en la red privada de preproducción 192.168.56.97/29. Hay cuatro banderas amarillas escondidas en las máquinas virtuales vm6, vm7, vm8 y vm9.</li>
+                <li><b>Bandera roja:</b> Bandera de dificultad avanzada, la bandera roja se encuentra escondida en la red privada de producción 192.168.56.200/29. Existe una única bandera roja oculta en la máquina virtual vm10 y es la bandera más complicada del escenario.</li>
+            </ul>
+            <h3 id="puntuacion-total"></h3>
+            <button onclick="corregirCodigos()">Corregir códigos</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Banderas</th>
+                                    <th scope="col">Código secreto</th>
+                                    <th scope="col">Respuesta Correcta</th>
+                                    <th scope="col">Puntuación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bandera 1</td>
+                                    <td><input type="text" id="codigo1"/></td>
+                                    <td id="correccion1"></td>
+                                    <td id="puntuacion1"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bandera 2</td>
+                                    <td><input type="text" id="codigo2"/></td>
+                                    <td id="correccion2"></td>
+                                    <td id="puntuacion2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bandera 3</td>
+                                    <td><input type="text" id="codigo3"/></td>
+                                    <td id="correccion3"></td>
+                                    <td id="puntuacion3"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bandera 4</td>
+                                    <td><input type="text" id="codigo4"/></td>
+                                    <td id="correccion4"></td>
+                                    <td id="puntuacion4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bandera 5</td>
+                                    <td><input type="text" id="codigo5"/></td>
+                                    <td id="correccion5"></td>
+                                    <td id="puntuacion5"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bandera 6</td>
+                                    <td><input type="text" id="codigo6"/></td>
+                                    <td id="correccion6"></td>
+                                    <td id="puntuacion6"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bandera 7</td>
+                                    <td><input type="text" id="codigo7"/></td>
+                                    <td id="correccion7"></td>
+                                    <td id="puntuacion7"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bandera 8</td>
+                                    <td><input type="text" id="codigo8"/></td>
+                                    <td id="correccion8"></td>
+                                    <td id="puntuacion8"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bandera 9</td>
+                                    <td><input type="text" id="codigo9"/></td>
+                                    <td id="correccion9"></td>
+                                    <td id="puntuacion9"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img id="facil" src="./images/Banderas.png">
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laboratorio de ciberseguridad</title>
+    <link rel="stylesheet" href="styles/personalizado.css">
+    <script src="scripts/personalizado.js"></script>
+  </head>
+  <body>
+    <h1>Laboratorio de ciberseguridad</h1>
+    <nav>
+        <ul>
+          <li><a href="informacion.html">Información</a></li>
+          <li><a href="dificultades.html">Dificultades del Escenario</a></li>
+          <li><a href="banderas.html">Banderas</a></li>
+          <li><a href="pistas.html">Pistas</a></li>
+          <li><a href="personalizado.html">Escenario Personalizado</a></li>
+        </ul>
+      </nav>
+      <h2>Escenario</h2>
+	<form>
+		<label for="num_maquinas">Número de máquinas virtuales:</label>
+		<input type="number" id="num_maquinas" name="num_maquinas" min="2" max="10">
+		<br><br>
+		<label for="num_redes">Número de redes:</label>
+		<input type="number" id="num_redes" name="num_redes" min="1" max="3">
+		<br><br>
+		<button type="button" onclick="ejecutarScript()">Guardar valores</button>
+	</form>
+
+	<script>
+		function ejecutarScript() {
+            let num_maquinas = document.getElementById("num_maquinas").value;
+            let num_redes = document.getElementById("num_redes").value;
+
+            // Validar los valores de entrada aquí
+            if (num_maquinas < 2 || num_maquinas > 10 || num_redes < 1 || num_redes > 3) {
+                alert("Error: valores de entrada inválidos");
+                return;
+            }
+
+            // Ejecutar el script Python con los valores de entrada
+            let cmd = `python ../Despliegue/personalizado.py ${num_maquinas} ${num_redes}`;
+            Shell.run(cmd, function(output) {
+                console.log(output);
+            });
+        }
+	</script>
+  </body>
+</html>

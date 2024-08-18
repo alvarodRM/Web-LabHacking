@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratorio de ciberseguridad - Escenario</title>
+    <script src="https://cdn.jsdelivr.net/npm/shelljs@0.8.4/shell.min.js"></script>
+    <link rel="stylesheet" href="styles/dificultades.css">
+    <script src="scripts/dificultades.js"></script>
+</head>
+<body>
+	<h2>Laboratorio de ciberseguridad</h2>
+    <nav>
+        <ul>
+            <li><a href="informacion.html">Información</a></li>
+            <li><a href="dificultades.html">Dificultades del Escenario</a></li>
+            <li><a href="banderas.html">Banderas</a></li>
+            <li><a href="pistas.html">Pistas</a></li>
+            <li><a href="personalizado.html">Escenario Personalizado</a></li>
+        </ul>
+    </nav>
+    <div class="section">
+        <h3>Dificultad Fácil del Laboratorio</h3>
+        <p>En la dificultad fácil del escenario se pretende conseguir los siguientes conocimientos: Escaneo de redes y servicios, movimientos laterales, localización de ficheros ocultos en el sistema de ficheros de las máquinas virtuales, hacking web, ataques de diccionario y de fuerza bruta, ataques con la herramienta netcat y la explotación de la vulnerabilidad vsftpd 2.3.4 empleando el framework de ataque de metasploit.</p>
+        <img id="facil" src="./images/Facil.png">
+        <div>
+            <button onclick="runScript('./Despliegue/Dificultad1-Facil/instalarEscenario.py')">Instalar Escenario</button>
+            <button onclick="runScript('./Despliegue/Dificultad1-Facil/eliminarEscenario.py')">Eliminar Escenario</button>
+            <button onclick="runScript('./Despliegue/Dificultad1-Facil/iniciarEscenario.py')">Iniciar Escenario</button>
+            <button onclick="runScript('./Despliegue/Dificultad1-Facil/detenerEscenario.py')">Detener Escenario</button>
+            <button onclick="runScript('./Despliegue/Dificultad1-Facil/apagarEscenario.py')">Apagar Escenario</button>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>Dificultad Media del Laboratorio</h3>
+        <p>En la dificultad media del escenario se pretende conseguir los siguientes conocimientos: Escaneo de redes y servicios, movimientos laterales, localización de ficheros ocultos en el sistema de ficheros de las máquinas virtuales, pivotaje entre redes, ataques de diccionario avanzados, creación de diccionarios personalizados, descifrado de hashes, transformaciones de binario a texto, transformaciones de hexadecimal a texto, ataques a servidores web de wordpress, ataques al servicio ftp, explotación de vulnerabilidades unreal ircd y eternalblue empleando el framework de ataque de metasploit.</p>
+        <button onclick="runScript('./Despliegue/Dificultad2-Media/instalarEscenario.py')">Instalar Escenario</button>
+        <button onclick="runScript('./Despliegue/Dificultad2-Media/eliminarEscenario.py')">Eliminar Escenario</button>
+        <button onclick="runScript('./Despliegue/Dificultad2-Media/iniciarEscenario.py')">Iniciar Escenario</button>
+        <button onclick="runScript('./Despliegue/Dificultad2-Media/detenerEscenario.py')">Detener Escenario</button>
+        <button onclick="runScript('./Despliegue/Dificultad2-Media/apagarEscenario.py')">Apagar Escenario</button>
+    </div>
+    
+    <div class="section">
+        <h3>Dificultad Avanzada del Laboratorio</h3>
+        <p>En la dificultad avanzada del escenario se pretende conseguir los siguientes conocimientos: Escaneo de redes y servicios, movimientos laterales, localización de ficheros ocultos en el sistema de ficheros de las máquinas virtuales, pivotaje entre redes, ataques de diccionario más complejos, cifrado y descifrado César e implementación y ejecución de un ransomware en el servidor DNS de la infraestructura.</p>
+        <button onclick="runScript('./Despliegue/Dificultad3-Dificil/instalarEscenario.py')">Instalar Escenario</button>
+        <button onclick="runScript('./Despliegue/Dificultad3-Dificil/eliminarEscenario.py')">Eliminar Escenario</button>
+        <button onclick="runScript('./Despliegue/Dificultad3-Dificil/iniciarEscenario.py')">Iniciar Escenario</button>
+        <button onclick="runScript('./Despliegue/Dificultad3-Dificil/detenerEscenario.py')">Detener Escenario</button>
+        <button onclick="runScript('./Despliegue/Dificultad3-Dificil/apagarEscenario.py')">Apagar Escenario</button>
+    </div>
+</body>
+</html>

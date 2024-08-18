@@ -1,0 +1,64 @@
+/* Selecciona el elemento h1 y lo centra en la página */
+h1 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 3rem;
+}
+
+
+/* Selecciona el elemento h2 y lo colocamos a la izquierda de la página */
+h2 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 3rem;
+}
+  
+
+/* Selecciona el elemento p y le da un margen superior e inferior */
+p {
+    margin: 20px 0;
+}
+
+
+/* Selecciona la etiqueta nav y le da un fondo de color gris oscuro */
+nav {
+    background-color: #333;
+}
+
+
+/* Selecciona la lista no ordenada dentro de la etiqueta nav y le quita los puntos de lista */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Selecciona cada elemento de la lista y le da un estilo de botón */
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+/* Selecciona cada enlace dentro de los elementos de la lista y les da estilo de botón */
+nav a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Establece un estilo diferente para el enlace activo (el que representa la página actual) */
+nav a.active {
+    background-color: #007bff;
+}
+
+
+/* Establece un estilo de transición suave para los enlaces */
+nav a:hover {
+    background-color: #555;
+}
+  

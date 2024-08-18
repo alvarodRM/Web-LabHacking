@@ -1,0 +1,103 @@
+/* Selecciona el elemento h1 y lo centra en la página */
+h1 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 3rem;
+}
+
+
+/* Selecciona el elemento h2 y lo colocamos a la izquierda de la página */
+h2 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 3rem;
+}
+
+
+/* Selecciona el elemento p y le da un margen superior e inferior */
+p {
+    margin: 20px 0;
+}
+
+
+/* Selecciona la etiqueta nav y le da un fondo de color gris oscuro */
+nav {
+    background-color: #333;
+}
+
+
+/* Selecciona la lista no ordenada dentro de la etiqueta nav y le quita los puntos de lista */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Selecciona cada elemento de la lista y le da un estilo de botón */
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+/* Selecciona cada enlace dentro de los elementos de la lista y les da estilo de botón */
+nav a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Establece un estilo diferente para el enlace activo (el que representa la página actual) */
+nav a.active {
+    background-color: #007bff;
+}
+
+
+/* Establece un estilo de transición suave para los enlaces */
+nav a:hover {
+    background-color: #555;
+}
+
+
+/* Estilo para la tabla */
+.table {
+    font-size: 18px; /* Tamaño de fuente */
+    margin: 20px; /* Margen alrededor de la tabla */
+    float: left; /* Alineación de la tabla a la izquierda */
+}
+  
+
+/* Estilo para las celdas de la tabla */
+th, td {
+    padding: 10px; /* Espacio interior de las celdas */
+    text-align: left; /* Alineación del texto al centro */
+}
+  
+
+/* Estilo para las cabeceras de la tabla */
+th {
+    background-color: #007bff; /* Fondo de las cabeceras */
+    color: #fff; /* Color de texto de las cabeceras */
+}
+  
+
+/* Estilo para filas pares de la tabla */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo de las filas pares */
+}
+  
+/* Estilo para los td que contienen respuestas correctas */
+.true {
+    background-color: #28a745; /* Fondo para respuestas correctas */
+    color: #fff; /* Color de texto para respuestas correctas */
+}
+  
+/* Estilo para los td que contienen respuestas incorrectas */
+.false {
+    background-color: #dc3545; /* Fondo para respuestas incorrectas */
+    color: #fff; /* Color de texto para respuestas incorrectas */
+}
